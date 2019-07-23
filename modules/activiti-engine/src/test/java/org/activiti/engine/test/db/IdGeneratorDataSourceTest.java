@@ -35,5 +35,7 @@ public class IdGeneratorDataSourceTest extends ResourceActivitiTestCase {
         e.printStackTrace();
       }
     }
+    // wait for threads to complete
+    waitForJobExecutorToProcessAllJobs(10000, 5000);
   }
 }
